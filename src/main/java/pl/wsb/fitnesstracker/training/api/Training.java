@@ -26,7 +26,7 @@ public class Training {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column
+    @Column(nullable = false)
     private Date startTime;
 
     @Column

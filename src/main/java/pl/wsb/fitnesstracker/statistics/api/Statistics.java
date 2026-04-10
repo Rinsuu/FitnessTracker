@@ -22,10 +22,10 @@ public class Statistics {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column
+    @Column(nullable = false)
     private int totalTrainings;
 
-    @Column
+    @Column(nullable = false)
     private double totalDistance;
 
     @Column
