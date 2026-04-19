@@ -10,7 +10,7 @@ import pl.wsb.fitnesstracker.event.Event;
 import pl.wsb.fitnesstracker.user.api.User;
 
 @Entity
-@Table(name = "user_events")
+@Table(name = "user_event")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString

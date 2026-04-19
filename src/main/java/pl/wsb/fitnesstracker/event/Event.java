@@ -9,7 +9,7 @@ import lombok.ToString;
 import java.time.LocalDateTime;
 
 @Entity
-@Table(name = "events")
+@Table(name = "event")
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @ToString
