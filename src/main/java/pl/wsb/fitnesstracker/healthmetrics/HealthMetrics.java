@@ -7,7 +7,7 @@ import lombok.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name= "health_metrics")
+@Table(name = "health_metrics")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
@@ -20,19 +20,27 @@ public class HealthMetrics {
     @Nullable
     private Long id;
 
-    @Column(name = "user_id", nullable = false)
-    private Long userId;
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private User user;
 
-    @Column
+    @Column(nullable = false)
     private LocalDate date;
 
-    @Column
-    private Double weight;
+    @Column(nullable = false)
+    private double weight;
 
-    @Column
-    private Double height;
+    @Column(nullable = false)
+    private double height;
 
-    @Column
-    private Integer heartRate;
+    @Column(name = "heart_rate", nullable = false)
+    private int heartRate;
 
+    public HealthMetrics(User user, LocalDate date, double weight, double height, int heartRate) {
+        this.user = user;
+        this.date = date;
+        this.weight = weight;
+        this.height = height;
+        this.heartRate = heartRate;
+    }
 }

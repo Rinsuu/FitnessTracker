@@ -9,7 +9,7 @@ import pl.wsb.fitnesstracker.user.api.User;
 import java.util.Date;
 
 @Entity
-@Table(name= "trainings")
+@Table(name = "trainings")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
@@ -26,19 +26,20 @@ public class Training {
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    @Column(nullable = false)
+    @Column(name = "start_time", nullable = false)
     private Date startTime;
 
-    @Column
+    @Column(name = "end_time", nullable = false)
     private Date endTime;
 
-    @Column
+    @Enumerated(EnumType.STRING)
+    @Column(name = "activity_type", nullable = false)
     private ActivityType activityType;
 
-    @Column
+    @Column(nullable = false)
     private double distance;
 
-    @Column
+    @Column(name = "average_speed", nullable = false)
     private double averageSpeed;
 
     public Training(
