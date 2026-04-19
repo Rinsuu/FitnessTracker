@@ -3,6 +3,7 @@ package pl.wsb.fitnesstracker.healthmetrics;
 import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import lombok.*;
+import pl.wsb.fitnesstracker.user.api.User;
 
 import java.time.LocalDate;
 

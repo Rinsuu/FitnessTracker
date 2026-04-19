@@ -33,12 +33,6 @@ public class User {
     @Column(nullable = false, unique = true)
     private String email;
 
-    @Column(nullable = false)
-    private String firstName;
-
-    @Column(nullable = false)
-    private String lastName;
-
     public User(
             final String firstName,
             final String lastName,
@@ -48,8 +42,6 @@ public class User {
         this.lastName = lastName;
         this.birthdate = birthdate;
         this.email = email;
-        this.firstName = firstName;
-        this.lastName = lastName;
     }
 
 }
