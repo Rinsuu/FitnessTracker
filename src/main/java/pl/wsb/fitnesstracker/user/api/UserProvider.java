@@ -1,5 +1,6 @@
 package pl.wsb.fitnesstracker.user.api;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,8 +27,23 @@ public interface UserProvider {
     /**
      * Retrieves all users.
      *
-     * @return An {@link Optional} containing the all users,
+     * @return A {@link List} containing all users.
      */
     List<User> findAllUsers();
 
+    /**
+     * Retrieves all users whose email contains the given snippet.
+     *
+     * @param emailSnippet The email snippet to search for
+     * @return A {@link List} containing matching users.
+     */
+    List<User> searchUsersByEmail(String emailSnippet);
+
+    /**
+     * Retrieves all users born before the given date.
+     *
+     * @param date The reference date
+     * @return A {@link List} containing matching users.
+     */
+    List<User> findUsersOlderThan(LocalDate date);
 }

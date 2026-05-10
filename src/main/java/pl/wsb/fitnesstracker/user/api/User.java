@@ -44,4 +44,18 @@ public class User {
         this.email = email;
     }
 
+    public void update(User user) {
+        if (user.getFirstName() != null) {
+            this.firstName = user.getFirstName();
+        }
+        if (user.getLastName() != null) {
+            this.lastName = user.getLastName();
+        }
+        if (user.getBirthdate() != null) {
+            this.birthdate = user.getBirthdate();
+        }
+        if (user.getEmail() != null) {
+            this.email = user.getEmail();
+        }
+    }
 }

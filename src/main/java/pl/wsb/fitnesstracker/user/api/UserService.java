@@ -14,4 +14,19 @@ public interface UserService {
      */
     User createUser(User user);
 
+    /**
+     * Updates an existing user.
+     *
+     * @param id   The id of the user to be updated
+     * @param user The user details to update
+     * @return The updated user
+     */
+    User updateUser(Long id, User user);
+
+    /**
+     * Deletes a user by their id.
+     *
+     * @param id The id of the user to be deleted
+     */
+    void deleteUser(Long id);
 }
